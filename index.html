@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBMINT // Creative Motion & 3D WebGL Studio</title>
+    <meta name="description" content="Portfolio of Webmint - Advanced Motion Animation Web Designer & WebGL Specialist. High-end interactive 3D web experiences, GSAP motion engineering, and shader graphics.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lenis Smooth Scroll CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Preloader Screen -->
+    <div id="preloader" class="preloader">
+        <div class="loader-curtain loader-left"></div>
+        <div class="loader-curtain loader-right"></div>
+        <div class="loader-content">
+            <div class="loader-brand">WEBMINT // 01</div>
+            <div class="loader-counter-wrap">
+                <span id="loader-counter" class="loader-counter">000</span>
+                <span class="loader-percent">%</span>
+            </div>
+            <div class="loader-bar-wrap">
+                <div id="loader-bar" class="loader-bar"></div>
+            </div>
+            <div class="loader-status">INITIALIZING WEBGL CORE & GLSL SHADERS...</div>
+        </div>
+    </div>
+
+    <!-- Background Three.js WebGL Canvas -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- Main Content Wrapper (Used for Lenis Smooth Scroll & Footer Curtain Reveal) -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- NAVIGATION HEADER -->
+            <header class="header">
+                <a href="#hero" class="logo" data-cursor="magnetic">
+                    <img src="webmint-logo.jpg" alt="WEBMINT Logo" class="brand-logo-img">
+                    <span class="logo-text">WEBMINT</span>
+                </a>
+                <nav class="nav-links">
+                    <a href="#about" class="nav-link" data-cursor="magnetic">ABOUT</a>
+                    <a href="#works" class="nav-link" data-cursor="magnetic">WORKS</a>
+                    <a href="#skills" class="nav-link" data-cursor="magnetic">EXPERTISE</a>
+                    <a href="#testimonials" class="nav-link" data-cursor="magnetic">REVIEWS</a>
+                    <a href="https://www.instagram.com/webmintt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="nav-link nav-cta" data-cursor="magnetic">GET IN TOUCH ↗</a>
+                </nav>
+            </header>
+
+            <!-- HERO SECTION -->
+            <section id="hero" class="hero-section">
+                <div class="hero-container">
+
+                    <div id="hero-title-container" class="hero-title-container">
+                        <div class="hero-tag-strip">
+                            <span class="tag-dot"></span>
+                            <span class="tag-text">SPATIAL WEBGPU ❖ GLSL SHADERS ❖ GSAP ANIMATION</span>
+                        </div>
+                        <div class="line-mask">
+                            <h1 class="hero-title line-1" data-depth="25">CREATIVE MOTION</h1>
+                        </div>
+                        <div class="line-mask">
+                            <h1 class="hero-title line-2 accent-text glow-headline" data-depth="55">ENGINEERING</h1>
+                        </div>
+                        <div class="line-mask">
+                            <h1 class="hero-title line-3 outline-title" data-depth="85">& SPATIAL WEB</h1>
+                        </div>
+                    </div>
+
+                    <div class="hero-footer-grid">
+                        <div class="hero-desc">
+                            <p class="hero-subtext">
+                                Crafting high-octane 3D spatial interfaces, real-time GLSL shaders, and buttery smooth GSAP orchestrations for digital visionaries.
+                            </p>
+                        </div>
+                        <div class="hero-scroll-indicator" data-cursor="magnetic">
+                            <div class="scroll-mouse">
+                                <div class="scroll-wheel"></div>
+                            </div>
+                            <span class="scroll-label">SCROLL TO EXPLORE</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about-section">
+                <!-- Floating 3D Shapes -->
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+
+                <div class="container">
+                    <div class="section-label">
+                        <span class="label-number">01</span>
+                        <span class="label-title">// PHILOSOPHY & CRAFT</span>
+                    </div>
+
+                    <div class="about-content">
+                        <h2 id="about-reveal-text" class="reveal-text">
+                            I bridge the boundary between heavy mathematical WebGL rendering and visceral human emotion. By engineering real-time 3D environments, custom fragment shaders, and pixel-perfect kinetic choreography, I turn static websites into living, breathing digital installations.
+                        </h2>
+
+                        <div class="about-stats-grid">
+                            <div class="stat-card" data-cursor="magnetic">
+                                <h3 class="stat-number" data-target="08">08+</h3>
+                                <p class="stat-label">Years Crafting Spatial Web</p>
+                            </div>
+                            <div class="stat-card" data-cursor="magnetic">
+                                <h3 class="stat-number" data-target="99">99%</h3>
+                                <p class="stat-label">Client Satisfaction & Impact</p>
+                            </div>
+                            <div class="stat-card" data-cursor="magnetic">
+                                <h3 class="stat-number" data-target="42">42+</h3>
+                                <p class="stat-label">Global Immersive Launches</p>
+                            </div>
+                            <div class="stat-card" data-cursor="magnetic">
+                                <h3 class="stat-number" data-target="60">60 FPS</h3>
+                                <p class="stat-label">Uncompromising Performance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SELECTED WORKS (HORIZONTAL PIN SCROLL) -->
+            <section id="works" class="works-section">
+                <div class="works-header-sticky">
+                    <div class="section-label">
+                        <span class="label-number">02</span>
+                        <span class="label-title">// SELECTED WORKS [ 2024 — 2026 ]</span>
+                    </div>
+                </div>
+
+                <div class="works-pin-wrapper">
+                    <div id="works-track" class="works-track">
+
+                        <!-- Project 1: REDSUN AI PLATFORM (IMG_5392.MP4) -->
+                        <article class="project-card" data-cursor="expand">
+                            <div class="card-inner">
+                                <div class="card-image-wrap">
+                                    <video src="IMG_5392.mp4" autoplay loop muted playsinline class="card-video-media"></video>
+                                    <div class="card-overlay"></div>
+                                    <span class="card-tag">AI DASHBOARD // SAAS WEB APP</span>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-header-meta">
+                                        <span class="card-num">01 / 05</span>
+                                        <span class="card-year">2026</span>
+                                    </div>
+                                    <h3 class="card-title">REDSUN AI PLATFORM</h3>
+                                    <p class="card-desc">Sleek dark-mode AI SaaS web application featuring real-time analytics dashboards, interactive pricing matrices, and spatial UI.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 2: NICK'S CREAMY ICE CREAM (IMG_5393.MP4) -->
+                        <article class="project-card" data-cursor="expand">
+                            <div class="card-inner">
+                                <div class="card-image-wrap">
+                                    <video src="IMG_5393.mp4" autoplay loop muted playsinline class="card-video-media"></video>
+                                    <div class="card-overlay"></div>
+                                    <span class="card-tag">INTERACTIVE BRAND // E-COMMERCE</span>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-header-meta">
+                                        <span class="card-num">02 / 05</span>
+                                        <span class="card-year">2026</span>
+                                    </div>
+                                    <h3 class="card-title">NICK'S CREAMY ICE CREAM</h3>
+                                    <p class="card-desc">Vibrant product showcase and e-commerce experience for Swedish light ice cream brand featuring flavor sliders and micro-interactions.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 3: CURO HEALTHCARE PORTAL (IMG_5394.MP4) -->
+                        <article class="project-card" data-cursor="expand">
+                            <div class="card-inner">
+                                <div class="card-image-wrap">
+                                    <video src="IMG_5394.mp4" autoplay loop muted playsinline class="card-video-media"></video>
+                                    <div class="card-overlay"></div>
+                                    <span class="card-tag">HEALTHCARE // UI PLATFORM</span>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-header-meta">
+                                        <span class="card-num">03 / 05</span>
+                                        <span class="card-year">2025</span>
+                                    </div>
+                                    <h3 class="card-title">CURO HEALTHCARE PORTAL</h3>
+                                    <p class="card-desc">Human-centric medical booking platform with practitioner directory cards, appointment scheduling, and patient health portals.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 4: GLOSSY HAIR CO. (IMG_5395.MP4) -->
+                        <article class="project-card" data-cursor="expand">
+                            <div class="card-inner">
+                                <div class="card-image-wrap">
+                                    <video src="IMG_5395.MP4" autoplay loop muted playsinline class="card-video-media"></video>
+                                    <div class="card-overlay"></div>
+                                    <span class="card-tag">LUXURY BRANDING // SPA & BEAUTY</span>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-header-meta">
+                                        <span class="card-num">04 / 05</span>
+                                        <span class="card-year">2025</span>
+                                    </div>
+                                    <h3 class="card-title">GLOSSY HAIR CO.</h3>
+                                    <p class="card-desc">Editorial web experience for luxury hair salon and beauty studio featuring bespoke typography and portrait photography layouts.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 5: PANERAI CARBOTECH™ 3D (IMG_5396.MP4) -->
+                        <article class="project-card" data-cursor="expand">
+                            <div class="card-inner">
+                                <div class="card-image-wrap">
+                                    <video src="IMG_5396.MP4" autoplay loop muted playsinline class="card-video-media"></video>
+                                    <div class="card-overlay"></div>
+                                    <span class="card-tag">3D HOROLOGY // LUXURY CONFIGURATOR</span>
+                                </div>
+                                <div class="card-info">
+                                    <div class="card-header-meta">
+                                        <span class="card-num">05 / 05</span>
+                                        <span class="card-year">2024</span>
+                                    </div>
+                                    <h3 class="card-title">PANERAI CARBOTECH™ 3D</h3>
+                                    <p class="card-desc">Interactive luxury timepiece configurator featuring 3D exploded mechanical movement viewer and real-time materials selector.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERTISE & MARQUEE SECTION -->
+            <section id="skills" class="skills-section">
+                <div class="container">
+                    <div class="section-label">
+                        <span class="label-number">03</span>
+                        <span class="label-title">// CAPABILITIES & CORE ARSENAL</span>
+                    </div>
+                </div>
+
+                <div class="marquee-wrapper">
+                    <div class="marquee-track">
+                        <span class="marquee-item">THREE.JS ❖</span>
+                        <span class="marquee-item">GLSL SHADERS ❖</span>
+                        <span class="marquee-item">GSAP SCROLLTRIGGER ❖</span>
+                        <span class="marquee-item">WEBGPU ❖</span>
+                        <span class="marquee-item">RAYMARCHING ❖</span>
+                        <span class="marquee-item">PHYSICS SIMULATION ❖</span>
+                        <span class="marquee-item">BLENDER 3D ❖</span>
+                        <span class="marquee-item">CREATIVE DIRECTION ❖</span>
+                    </div>
+                    <div class="marquee-track" aria-hidden="true">
+                        <span class="marquee-item">THREE.JS ❖</span>
+                        <span class="marquee-item">GLSL SHADERS ❖</span>
+                        <span class="marquee-item">GSAP SCROLLTRIGGER ❖</span>
+                        <span class="marquee-item">WEBGPU ❖</span>
+                        <span class="marquee-item">RAYMARCHING ❖</span>
+                        <span class="marquee-item">PHYSICS SIMULATION ❖</span>
+                        <span class="marquee-item">BLENDER 3D ❖</span>
+                        <span class="marquee-item">CREATIVE DIRECTION ❖</span>
+                    </div>
+                </div>
+
+                <div class="container skills-grid-container">
+                    <div class="skills-grid">
+                        <div class="skill-column">
+                            <h4 class="skill-heading">3D & GRAPHICS</h4>
+                            <ul class="skill-list">
+                                <li>Custom Vertex & Fragment Shaders</li>
+                                <li>Volumetric Light & Atmospheric Fog</li>
+                                <li>Instanced Particle Systems (100k+)</li>
+                                <li>PBR Material Pipelines & Baking</li>
+                            </ul>
+                        </div>
+                        <div class="skill-column">
+                            <h4 class="skill-heading">MOTION & INTERACTION</h4>
+                            <ul class="skill-list">
+                                <li>Complex GSAP Timeline Orchestration</li>
+                                <li>Lenis & Physics Smooth Inertia</li>
+                                <li>Kinetic & Variable Typography</li>
+                                <li>Custom Pointer & Gesture Mechanics</li>
+                            </ul>
+                        </div>
+                        <div class="skill-column">
+                            <h4 class="skill-heading">ARCHITECTURE</h4>
+                            <ul class="skill-list">
+                                <li>Modern Modular JavaScript (ESNext)</li>
+                                <li>WebGL Render Loop Optimization</li>
+                                <li>Web Workers & Offscreen Canvas</li>
+                                <li>DOM-to-WebGL Hybrid Layouts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS / INDUSTRY PRAISE SECTION -->
+            <section id="testimonials" class="testimonials-section">
+                <div class="container">
+                    <div class="section-label">
+                        <span class="label-number">04</span>
+                        <span class="label-title">// INDUSTRY PRAISE & ENDORSEMENTS</span>
+                    </div>
+
+                    <div class="testimonials-grid">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card" data-cursor="magnetic">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">
+                                "WEBMINT transformed our digital flagship into an award-winning spatial web experience. Their real-time 3D shaders and 60fps WebGL rendering set a new standard for modern interactive design."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">TS</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Tobias van Schneider</h4>
+                                    <span class="author-role">Founder & Creative Director @ House of van Schneider</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card" data-cursor="magnetic">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">
+                                "Hands down one of the most gifted motion engineering teams in the industry. They bridge high-math WebGL shader architecture with intuitive, visceral user interaction."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">SS</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Saurabh Sharma</h4>
+                                    <span class="author-role">Principal UX Director @ Google Brand Studio</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card" data-cursor="magnetic">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">
+                                "The level of detail in Webmint's GSAP scroll choreography and custom WebGL shaders is unmatched."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">EM</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Elena Mishko</h4>
+                                    <span class="author-role">Head of Interactive Engineering @ Spotify Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card" data-cursor="magnetic">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-quote">
+                                "Working with Webmint was smooth as silk. Lenis scroll inertia paired with complex Three.js particle physics delivered a flawless 60 FPS flagship experience."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">DK</div>
+                                <div class="author-info">
+                                    <h4 class="author-name">David Karlsson</h4>
+                                    <span class="author-role">Global Creative Technology Lead @ Nike Innovation</span>
+                                </div>
+                            </div>
+                        </div>
+
+    <!-- Three.js (r128) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+
+    <!-- Custom Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
